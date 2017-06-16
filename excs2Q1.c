@@ -8,13 +8,13 @@ int main()
 
     if(bill>5000)
      {
-     y=(bill*15.000/100);
+     y=(bill*15/100);
      x=bill-y;
      printf("Bill is:\n%d",x);
      }
     else
     {
-    y=(bill*10.000/100);
+    y=(bill*10/100);
     x=bill-y;
     printf("Bill is:\n%d",x);
     }

@@ -19,13 +19,12 @@ int main()
     int I=0,kw=0,x,y,z,w;
     char T;
     char U;
-
     printf("Enter Account Number\n");
     scanf("%d",&I);
     printf("Enter user Code\n");//User to input either R,C or I. this is to be U.
     scanf("%s",&U);
     printf("Enter Electricity Consumption\n");
-    scanf("%d",&kw);
+    scanf("%d%",&kw);
     switch(U)//if U inputed is C then to execute the following
     {
     case 'C':
