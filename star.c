@@ -7,7 +7,7 @@ int main()
     scanf("%d",&num);
     for(rows=num;rows>=1;rows--){
         for(star=1;star<=rows;++star){
-            printf("*");
+            printf("* ");
         }
         printf("\n");
     }
