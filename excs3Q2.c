@@ -9,11 +9,14 @@ int main()
     float Avr;
     printf("Enter a number\n");
     scanf("%d",&Numb);
-    max=Numb;
+    if (Numb>0){
+     max=Numb;
     min=Numb;
     sum=0;
+
    while(Numb>0)
    {
+
     printf("Enter a Number\n");
     scanf("%d",&Numb);
     if(max<Numb)
@@ -22,7 +25,9 @@ int main()
         min=Numb;
     c++;
     sum=sum+Numb;
-    Avr=sum/Numb;
+    Avr=sum/c;
    }
-   printf("N \n%d,\n Max is\n%d\n,Min is \n%d\n Sum is\n%d\nAverage is %d",c,max,min,sum,Avr);
+    }
+   printf("N:is\n%d\n Max is\n%d\nMin is \n%d\n Sum is\n%d\nAverage is %.2f",c,max,min,sum,Avr);
+   return 0;
     }

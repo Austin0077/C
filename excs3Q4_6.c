@@ -19,9 +19,14 @@ int main()
     int I=0,kw=0,x,y,z,w;
     char T;
     char U;
+    do    {
 
-    printf("Enter Account Number\n");
+    printf("\nEnter Account Number\n");
     scanf("%d",&I);
+    if(I<0)
+    {
+        break;
+    }
     printf("Enter user Code\n");//User to input either R,C or I. this is to be U.
     scanf("%s",&U);
     printf("Enter Electricity Consumption\n");
@@ -36,12 +41,12 @@ int main()
            kw=kw-1000;
            y=3.75*kw;
            z=x+y;
-           printf("Your Electricity Bill is\n%d",z);
+           printf("Account Number %d Electricity Bill code %c is\n%d",I,U,z);
         }
         else
         {
             x=50000;
-            printf("Your Electricity Bill is\n%d",x);
+            printf("Account Number %d Electricity Bill code %c is\n%d",I,U,x);
         }
     break;
     case 'I'://if U inputed is I to execute the following.
@@ -58,33 +63,33 @@ int main()
            kw=kw-1000;
            y=5.60*kw;
            z=x+y;
-           printf("Your Electricity Bill is\n%d",z);
+           printf("Account Number %d Electricity Bill code %c is\n%d",I,U,z);
         }
         else
         {
             x=68000;
-            printf("Your Electricity Bill is\n%d",x);
+            printf("Account Number %d Electricity Bill code %c is\n%d",I,U,x);
         }
         break;
-        case 'op':
-        case 'Op':
-        case 'OP':
+        case 'o':
+        case 'O':
+        //case 'OP':
             if(kw>1000)
         {
            x=37000;
            w=kw-1000;
            y=2.75*w;
            z=x+y;
-           printf("Your Electricity Bill is\n%d",z);
+           printf("Account Number %d Electricity Bill code %c is\n%d",I,U,z);
         }
         else
         {
             x=37000;
-            printf("Your Electricity Bill is\n%d",x);
+            printf("Account Number %d Electricity Bill code %c is\n%d",I,U,x);
         }
         break;
         default:
-            printf("Invalid time of usage\n please use P for peak or OP for Off-peak");
+            printf("Invalid time of usage\n please use P for peak or op for Off-peak");
     }
     break;
     case 'R':
@@ -92,11 +97,13 @@ int main()
         x=500;
         w=kw*4.8;
         z=w+x;
-        printf("Your Electricity Bill is\n%d",z);
+        printf("Account Number %d Electricity Bill code %c is\n%d",I,U,z);
     break;
     default:
         printf("Invalid User Code!!\nPlease use Code R for residential use,\ncode C for commercial use \nand code I for industrial use");
 
 }
+    }while(I>=0);
 return 0;
 }
+
